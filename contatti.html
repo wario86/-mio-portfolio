@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.1.2-dist/css/bootstrap.min.css" rel="stylesheet">
+       <link href="asset/css/style.css" rel="stylesheet">
+    <title>Contacts</title>
+    
+         <link rel="icon" href="asset/img/cm.ico" />
+
+      
+  </head>
+  <body>
+ <nav class="navbar navbar-expand-lg navbar navbar-light fixed-top py-3"style="background-color: #FFFFFF;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><div class="name00">
+    <span class="text1">Mario</span>
+    <span class="text2">Corritore</span>
+ </div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-primary" href="contatti.html">Contacts</a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+ 
+</nav>
+
+
+<div class="cont">
+<div class="container mt-5  pt-5 pb-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+ <h2 class=" text-center">Contacts</h2>
+<form class="row g-3 needs-validation" method="post" novalidate>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" class="form-control" id="validationTooltip01"  required>
+ <span class="invalid-feedback"> * campo obbligatorio</span></div>
+                <div class="mb-3">
+                    <label for="Oggetto" class="form-label">Oggetto</label>
+                     <input type="text" class="form-control" name="oggetto" id="validationTooltip02" required>
+   <span class="invalid-feedback"> * campo obbligatorio</span></div>
+                <div class="mb-3"><label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="EmailAddressInput" id="validationTooltip03" name='email'
+                           placeholder="inserisci il tuo indirizzo e-mail" required />
+                     <div class="invalid-feedback">email errata</div></div>
+                <div class="mb-3">
+ <label for="email" class="form-label">Messaggio</label><textarea name="msg" class="form-control" name="messaggio" id="validationTooltip04"cols="30" rows="10" required></textarea>
+                    <span class="invalid-feedback"> * campo obbligatorio</span>
+                </div><button class="btn btn-primary" type="submit">Invia</button>
+            </form></div></div></div></div>
+<!-- Optional JavaScript -->
+        <!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <script>
+            var forms = document.querySelectorAll('.needs-validation');
+            
+            Array.prototype.slice.call( forms ).forEach( function( form )
+            {
+                form.addEventListener( 'submit', function ( event )
+                {
+                    if ( !form.checkValidity( ) )
+                    {
+                        event.preventDefault( )
+                        event.stopPropagation( );
+                    }
+
+                    form.classList.add( 'was-validated' );
+              }, false );
+            } );
+        </script>
+        <?php require("asset/php/send.php");?>
+<!-- Footer -->
+<footer class="bg-light text-dark  pt-5 pb-4 " id="piede"style="box-shadow: 2px 2px 10px rgba(0,0,0,0.2)">
+<div class="container">
+  <div class="row align-items-center" style="min-height: 5rem;">
+    <div class="col-5">where to find me :</div>
+    <div class="col-4"><a href="https://www.facebook.com/mario.wt.397/"target="_blank"><img src="asset/img/icons8-facebook-cerchiato-50.png"></a></div>
+    <div class="col-2"><a href="https://wa.me/393389716232" target="_blank"><img src="asset/img/icons8-whatsapp-50.png"></a></div>
+  </div>
+  </div>
+</footer>
+<!-- Footer -->
+   
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="bootstrap-5.1.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
